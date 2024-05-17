@@ -1,4 +1,4 @@
-# DataModels
+# 📊 DataModels
 
 El proyecto a desplegar en este laboratorio es una aplicación web. La aplicación permite visualizar una colección de recursos, para efectos de este caso, modelos de aprendizaje de máquina. Igualmente, cuando el usuario selecciona alguno de los recursos, se ofrece una vista con información detallada sobre el recurso seleccionado. La información de los recursos (p.ej., modelos) se encuentra almacenada en base de datos (p.ej., Dynamo DB). La aplicación tiene tres (vistas): raíz (“/”, home), descripción detallada de los modelos  y acerca de.
 
@@ -25,31 +25,25 @@ then run the following command int the root `/` to initialize the application:
 Build the containers
 
 ```bash
-  make app.build_dev
+  make app.build_prod
 ```
 
 Run the containers
 
 ```bash
-  make app.start_dev
+  make app.start_prod
 ```
 
 Or you can run the **frontend** container with one command
 
 ```bash
-  make frontend.start
+  make frontend.start_prod
 ```
 
 Or you can run the **backend** container with one command
 
 ```bash
-  make backend.start
-```
-
-Also you can run the **database** container with one command
-
-```bash
-  make database.start
+  make backend.start_prod
 ```
 
 ## 🚀 Running the implementation
@@ -58,12 +52,8 @@ When the application is running, usging the default configuration
 
 you can access the **frontend** in the following url:
 
-- [http://localhost:4200](http://localhost:4200)
+- [http://localhost](http://localhost:80)
 
 you can access the **backend** in the following url:
 
-- [http://localhost:3000](http://localhost:3000)
-
-and, you can access the swagger documentation of the **backend** in the following url:
-
-- [http://localhost:3000/api](http://localhost:3000/api)
+- [http://localhost:5001/api/models/](http://localhost:5001/api/models/)
