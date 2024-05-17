@@ -1,0 +1,14 @@
+# comment
+*/temp*
+*/*/temp*
+temp?
+
+
+# Tests
+*/coverage
+*/.nyc_output
+
+# MD
+*.md
+
+node_modules

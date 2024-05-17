@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: models-reactjs-image
+    container_name: host-stack-frontend
+    build:
+      context: ./frontend
+      dockerfile: ../provision/frontend/development/Dockerfile
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    restart: always
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    networks:
+      - main
+    volumes:
+      - ./frontend:/app
+
+  backend:
+    image: models-nodejs-image
+    container_name: host-stack-backend
+    build:
+      context: ./backend
+      dockerfile: ../provision/backend/development/Dockerfile
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    restart: always
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    networks:
+      - main
+    volumes:
+      - ./backend:/usr/src/app
+
+networks:
+  main:
+    driver: bridge
