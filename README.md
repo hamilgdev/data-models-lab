@@ -1,6 +1,6 @@
 # 📊 DataModels
 
-El proyecto a desplegar en este laboratorio es una aplicación web. La aplicación permite visualizar una colección de recursos, para efectos de este caso, modelos de aprendizaje de máquina. Igualmente, cuando el usuario selecciona alguno de los recursos, se ofrece una vista con información detallada sobre el recurso seleccionado. La información de los recursos (p.ej., modelos) se encuentra almacenada en base de datos (p.ej., Dynamo DB). La aplicación tiene tres (vistas): raíz (“/”, home), descripción detallada de los modelos  y acerca de.
+The project to be deployed in this lab is a web application. The application allows visualizing a collection of resources, for the purposes of this case, machine learning models. Likewise, when the user selects one of the resources, a view with detailed information about the selected resource is provided. The resource information (e.g., models) is stored in a database (e.g., Dynamo DB). The application has three (views): root (“/”, home), detailed description of the models and about.
 
 ## 🗃️ Environment
 
@@ -57,3 +57,7 @@ you can access the **frontend** in the following url:
 you can access the **backend** in the following url:
 
 - [http://localhost:5001/api/models/](http://localhost:5001/api/models/)
+
+### 📝 Notes
+
+ℹ This a Lab project for the course **Cloud Computing** at the **EAFIT** University. The project follows the guidelines of the [https://github.com/Course-ST0911/datamodels](https://github.com/Course-ST0911/datamodels) repository.
